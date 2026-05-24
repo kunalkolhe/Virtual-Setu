@@ -1,0 +1,75 @@
+🎯 Goal:
+
+Create a secure, professional, minimal, government-style UI for a digital document management system.
+
+🏛️ Overall Design Style:
+Inspired by Indian government portals (UIDAI / DigiLocker style)
+Clean, minimal, formal UI (no modern flashy AI look)
+Color theme:
+White background
+Dark blue primary (#0B3D91 style)
+Light grey sections
+Simple fonts (like Roboto / Arial)
+No animations except subtle hover effects
+📌 Website Pages:
+1. 🏠 Home Page
+Government header bar:
+Logo: “Virtual Setu”
+Title: “Digital Document Management System”
+Navigation:
+Home
+Login
+Verify Document
+Help
+Hero section:
+“Secure Digital Identity & Document Access Platform”
+Button: “Access Documents”
+2. 🔐 Login Page
+Two-step login:
+Mobile number / User ID
+OTP verification
+PIN setup/login option
+Clean government form style
+No fancy UI, only structured form layout
+3. 📄 QR Scan Access Page
+Title: “Scan QR to Access Document”
+Show QR scanner UI area (camera placeholder for now)
+After scan redirect to:
+Document selection page
+4. 📂 Document Selection Page
+Show list in table format:
+Aadhaar Card
+PAN Card
+Driving License
+College ID
+User selects ONE document
+Button: “Proceed”
+5. 🔐 PIN Verification Page
+Simple input box (4-digit PIN)
+Button: “Verify”
+Error message if wrong PIN
+6. 📄 Secure Document Viewer Page
+Government-style document frame
+Show ONLY selected document
+Add watermark:
+“Virtual Setu - Secure Document”
+Disable download button
+Disable copy and right click
+7. ℹ️ Help Page
+Instructions:
+How to scan QR
+How to access documents
+Security guidelines
+🔐 Security UI Rules:
+No download button anywhere
+No share button in UI
+Disable right-click
+Disable copy/paste in document viewer
+Show warning if suspicious activity detected:
+“Security Alert: Action not allowed”
+🎨 UI Requirements:
+Fully responsive (mobile + desktop)
+Government-style layout (simple grid system)
+Header + footer fixed like official portals
+Minimal icons (use simple line icons only)
+No modern UI effects (no glassmorphism, no neon, no 3D)

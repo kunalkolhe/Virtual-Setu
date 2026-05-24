@@ -1,0 +1,48 @@
+08:50:39.089 Running build in Washington, D.C., USA (East) – iad1
+08:50:39.090 Build machine configuration: 2 cores, 8 GB
+08:50:39.469 Cloning github.com/Pranav7758/Virtual-setu (Branch: main, Commit: f561402)
+08:50:39.786 Cloning completed: 317.000ms
+08:50:39.859 Found .vercelignore
+08:50:39.896 Removed 48 ignored files defined in .vercelignore
+08:50:39.896   /.git/config
+08:50:39.896   /.git/description
+08:50:39.897   /.git/FETCH_HEAD
+08:50:39.897   /.git/HEAD
+08:50:39.897   /.git/hooks/applypatch-msg.sample
+08:50:39.897   /.git/hooks/commit-msg.sample
+08:50:39.897   /.git/hooks/fsmonitor-watchman.sample
+08:50:39.898   /.git/hooks/post-update.sample
+08:50:39.898   /.git/hooks/pre-applypatch.sample
+08:50:39.898   /.git/hooks/pre-commit.sample
+08:50:40.921 Restored build cache from previous deployment (CYtbsWzNivHei29YtHFjswsr873f)
+08:50:41.141 Running "vercel build"
+08:50:41.821 Vercel CLI 51.6.1
+08:50:42.543 Installing dependencies...
+08:50:45.966 
+08:50:45.967 added 90 packages, and changed 3 packages in 3s
+08:50:45.968 
+08:50:45.968 119 packages are looking for funding
+08:50:45.968   run `npm fund` for details
+08:50:46.126 
+08:50:46.127 > vite_react_shadcn_ts@0.0.0 build
+08:50:46.127 > vite build
+08:50:46.127 
+08:50:46.571 [36mvite v5.4.19 [32mbuilding for production...[36m[39m
+08:50:46.624 transforming...
+08:50:46.955 Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+08:50:46.956   npx update-browserslist-db@latest
+08:50:46.956   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+08:50:54.570 [32m✓[39m 2008 modules transformed.
+08:50:55.030 rendering chunks...
+08:50:55.518 computing gzip size...
+08:50:55.569 [2mdist/[22m[32mindex.html                 [39m[1m[2m    2.82 kB[22m[1m[22m[2m │ gzip:   0.93 kB[22m
+08:50:55.569 [2mdist/[22m[2massets/[22m[35mindex-Bh8MrJpm.css  [39m[1m[2m   97.52 kB[22m[1m[22m[2m │ gzip:  16.74 kB[22m
+08:50:55.570 [2mdist/[22m[2massets/[22m[36mindex-xVp0PEHv.js   [39m[1m[2m   13.03 kB[22m[1m[22m[2m │ gzip:   5.20 kB[22m
+08:50:55.570 [2mdist/[22m[2massets/[22m[36mpdf-CTZ9Q1jI.js     [39m[1m[2m  453.46 kB[22m[1m[22m[2m │ gzip: 135.15 kB[22m
+08:50:55.570 [2mdist/[22m[2massets/[22m[36mindex-DkvanuPX.js   [39m[1m[33m1,366.63 kB[39m[22m[2m │ gzip: 424.02 kB[22m
+08:50:55.570 [32m✓ built in 8.97s[39m
+08:50:55.570 [33m
+08:50:55.570 (!) Some chunks are larger than 500 kB after minification. Consider:
+08:50:55.570 - Using dynamic import() to code-split the application
+08:50:55.570 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+08:50:55.571 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m

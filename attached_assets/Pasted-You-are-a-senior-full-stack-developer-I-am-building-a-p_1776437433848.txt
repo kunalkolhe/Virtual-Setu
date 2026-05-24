@@ -1,0 +1,101 @@
+You are a senior full-stack developer.
+
+I am building a project called "Virtual Setu" (Digital Document Management Platform) using:
+- React + TypeScript (Frontend)
+- Supabase (Auth, Database, Storage)
+- Tailwind CSS + shadcn/ui
+
+I want to implement a SUBSCRIPTION SYSTEM with 3 plans:
+
+1. FREE PLAN
+2. PREMIUM PLAN
+3. PLATINUM PLAN
+
+-----------------------------------
+🎯 FEATURES TO IMPLEMENT
+-----------------------------------
+
+1. Create a pricing system with 3 plans:
+
+FREE:
+- Limited document uploads (e.g., 5 documents)
+- Basic AI chatbot access
+- No QR emergency sharing
+
+PREMIUM:
+- 100 document uploads
+- Full AI assistant access
+- QR emergency access enabled
+- Priority document verification
+
+PLATINUM:
+- Unlimited uploads
+- Advanced AI analysis
+- Instant QR access + no PIN delay
+- Future features enabled
+
+-----------------------------------
+🧱 BACKEND (SUPABASE)
+-----------------------------------
+
+1. Create a new table: `subscriptions`
+Columns:
+- id (uuid, primary key)
+- user_id (uuid, foreign key)
+- plan (text: free / premium / platinum)
+- status (active / inactive)
+- start_date
+- end_date
+
+2. Update `profiles` table:
+- add column: plan (default = 'free')
+
+3. Create RLS policies:
+- Users can only access their own subscription
+
+-----------------------------------
+💳 PAYMENT INTEGRATION
+-----------------------------------
+
+Use Razorpay (India friendly).
+
+Steps:
+- Create API route: `/api/create-order`
+- Create API route: `/api/verify-payment`
+- After successful payment:
+    - Update user's plan in Supabase
+    - Insert into subscriptions table
+
+-----------------------------------
+⚛️ FRONTEND IMPLEMENTATION
+-----------------------------------
+
+1. Create a Pricing Page:
+- Show 3 cards (Free, Premium, Platinum)
+- Highlight Premium as "Most Popular"
+
+2. Add "Upgrade" buttons:
+- Free → Premium
+- Premium → Platinum
+
+3. Handle payment flow:
+- Call backend order API
+- Open Razorpay checkout
+- Verify payment
+- Update UI
+
+-----------------------------------
+🔒 FEATURE RESTRICTIONS (IMPORTANT)
+-----------------------------------
+
+Implement logic to restrict features:
+
+Example:
+- If FREE → limit uploads
+- If not PREMIUM → block QR sharing
+- If not PLATINUM → limit AI usage
+
+Create a hook:
+`useUserPlan()`
+
+Example usage:

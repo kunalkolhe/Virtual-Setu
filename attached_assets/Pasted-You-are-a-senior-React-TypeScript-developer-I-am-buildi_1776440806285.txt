@@ -1,0 +1,138 @@
+You are a senior React + TypeScript developer.
+
+I am building a project called "Virtual Setu" using:
+- React (Vite + TypeScript)
+- Supabase (Authentication)
+- Tailwind CSS + shadcn/ui
+
+I want to build a COMPLETE AUTH SYSTEM with:
+
+1. Login with Email + Password
+2. Forgot Password (Reset via Email)
+3. OTP Authentication (Email OTP or Magic Link)
+4. Clean UI + Error Handling
+
+-----------------------------------
+⚛️ FRONTEND REQUIREMENTS
+-----------------------------------
+
+Create a page:
+- /pages/Auth.tsx
+
+UI should have 3 tabs:
+1. Login
+2. Signup
+3. OTP Login
+
+Use shadcn/ui components:
+- Card
+- Input
+- Button
+- Tabs
+- Toast
+
+-----------------------------------
+🔐 LOGIN (EMAIL + PASSWORD)
+-----------------------------------
+
+Fields:
+- Email
+- Password
+
+On submit:
+- Use Supabase auth.signInWithPassword()
+
+Handle:
+- Invalid credentials
+- Loading state
+- Success redirect to dashboard
+
+-----------------------------------
+🔁 FORGOT PASSWORD
+-----------------------------------
+
+Add "Forgot Password?" link
+
+When clicked:
+- Show email input
+- Call: supabase.auth.resetPasswordForEmail(email)
+
+After success:
+- Show message: "Check your email to reset password"
+
+-----------------------------------
+🔢 OTP LOGIN (MAGIC LINK / OTP)
+-----------------------------------
+
+Option 1 (Recommended):
+- Email OTP / Magic Link login
+
+UI:
+- Email input
+- Button: "Send OTP"
+
+Logic:
+- Call: supabase.auth.signInWithOtp({ email })
+
+Then:
+- Show input for OTP
+- Verify OTP using Supabase session
+
+-----------------------------------
+🧱 BACKEND (SUPABASE CONFIG)
+-----------------------------------
+
+In Supabase Dashboard:
+- Enable Email Auth
+- Enable "Magic Link / OTP"
+- Disable email confirmation (optional for testing)
+
+-----------------------------------
+🧠 UX FEATURES
+-----------------------------------
+
+- Show loader while request is processing
+- Show toast messages:
+  - Success
+  - Error
+- Disable button while loading
+- Auto redirect if already logged in
+
+-----------------------------------
+📦 FILE STRUCTURE
+-----------------------------------
+
+Create:
+- /pages/Auth.tsx
+- /components/Auth/LoginForm.tsx
+- /components/Auth/SignupForm.tsx
+- /components/Auth/OtpForm.tsx
+
+-----------------------------------
+🎯 BONUS FEATURES
+-----------------------------------
+
+- Remember user session
+- Redirect to /dashboard after login
+- Show user name/email in navbar
+
+-----------------------------------
+🎨 UI DESIGN
+-----------------------------------
+
+- Centered card layout
+- Clean modern UI
+- Dark mode compatible
+- Mobile responsive
+
+-----------------------------------
+🎯 FINAL GOAL
+-----------------------------------
+
+A complete authentication system where:
+- Users can login via password
+- Users can reset password
+- Users can login via OTP
+- UI is clean and production-ready
+
+Write clean, modular, well-commented code.

@@ -1,0 +1,153 @@
+You are a senior full-stack developer.
+
+I am working on a project called "Virtual Setu" (Digital Document Management Platform) using:
+- React + TypeScript (Vite)
+- Supabase (Database + Auth + Storage)
+- Tailwind CSS
+
+I already have:
+1. Checklist Page
+2. Smart Checklist Page
+3. Document Type Section (Aadhaar, PAN, Passport, etc.)
+
+I want to integrate WEB SCRAPING into:
+- Document Type selection
+- Checklist generation
+
+--------------------------------------------------
+
+🎯 MAIN GOAL:
+
+When a user selects a document type (like "passport"):
+
+1. Automatically fetch required documents using a web scraping API
+2. Generate a checklist dynamically
+3. Show checklist in UI
+4. Compare with user's uploaded documents (Smart Checklist)
+
+--------------------------------------------------
+
+🛠️ BACKEND REQUIREMENTS:
+
+1. Create API endpoint:
+   POST /api/get-checklist
+
+2. Input:
+   {
+     "documentType": "passport"
+   }
+
+3. Use web scraping API (API key from ENV)
+   - Do NOT hardcode API key
+   - Fetch data from relevant government websites
+
+4. Extract:
+   - requiredDocuments (array of strings)
+   - steps (array)
+   - notes (array)
+
+5. Store result in Supabase table:
+   table name: checklists
+   fields:
+     - id
+     - document_type
+     - required_documents (json)
+     - steps (json)
+     - notes (json)
+     - created_at
+
+6. Caching logic:
+   - If checklist already exists → return cached data
+   - Else → scrape and store → return response
+
+7. Response format:
+   {
+     "documentType": "passport",
+     "requiredDocuments": [
+       { "name": "Aadhaar Card", "status": "unknown" }
+     ],
+     "steps": [],
+     "notes": []
+   }
+
+--------------------------------------------------
+
+💻 FRONTEND REQUIREMENTS:
+
+### 1. Document Type Section:
+
+- Add dropdown or cards for:
+  - Aadhaar
+  - PAN
+  - Passport
+  - Driving License
+
+- On selection:
+  → Call /api/get-checklist
+  → Store response in state
+
+--------------------------------------------------
+
+### 2. Checklist Page:
+
+- Display requiredDocuments as checklist:
+  - Checkbox
+  - Document name
+  - Status
+
+- Add:
+  - Loading spinner while fetching
+  - Error message if API fails
+
+--------------------------------------------------
+
+### 3. Smart Checklist Page:
+
+- Fetch user's uploaded documents from Supabase
+
+- Compare:
+  scraped requiredDocuments vs user documents
+
+- Update status:
+  ✔ "available" (if user has uploaded)
+  ❌ "missing" (if not uploaded)
+
+- Show visually:
+  - Green for available
+  - Red for missing
+
+--------------------------------------------------
+
+🎨 UI REQUIREMENTS:
+
+- Use Tailwind CSS
+- Clean card layout
+- Responsive design
+- Use icons for status
+
+--------------------------------------------------
+
+⚠️ IMPORTANT:
+
+- Use async/await
+- Handle errors properly
+- Do NOT hardcode API keys
+- Keep code modular
+- Make it production-ready
+
+--------------------------------------------------
+
+🚀 BONUS (if possible):
+
+- Add refresh button to re-fetch checklist
+- Add fallback static checklist if scraping fails
+
+--------------------------------------------------
+
+OUTPUT:
+
+Give complete code:
+1. Backend API (scraping + Supabase caching)
+2. Frontend integration (Document Type + Checklist + Smart Checklist)
+3. Example components
+4. Folder structure

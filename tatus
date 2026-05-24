@@ -1,0 +1,10 @@
+[33m009dcb5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update README with professional documentation and add new components
+[33m97805bc[m Add Vercel configuration for SPA routing
+[33m89336ac[m Fix QR code URL to point to deployed Vercel site
+[33m8504b04[m Update Supabase client to use environment variables for production deployment
+[33m9ecd131[m Fix QR code URL to point to share page
+[33m75525ab[m Fix login route in navigation
+[33m76b2c9d[m Deleted vite.config.ts.timestamp-1758296506219-ae0a38290ce46.mjs
+[33mb889f9e[m Added vite.config.ts.timestamp-1758296506219-ae0a38290ce46.mjs
+[33m3504a6a[m Updated package-lock.json
+[33me7ac048[m Updated .gitignore

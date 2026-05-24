@@ -1,0 +1,72 @@
+
+Skip to content
+
+Find…
+F
+
+Settings
+General
+Build and Deployment
+Environments
+Git
+Deployment Protection
+Functions
+Cron Jobs
+Microfrontends
+Project Members
+Drains
+Security
+Connectivity
+Advanced
+
+Avatar for borsepranav700-6545
+borsepranav700-6545
+
+
+Project Settings
+Project Name
+Used to identify your Project on the Dashboard, Vercel CLI, and in the URL of your Deployments.
+
+virtual-setu-hub
+vercel.com/…0-gmailcoms-projects/
+Learn more about Project Name
+Project ID
+Used when interacting with the Vercel API.
+
+prj_S7IygicHVhuV72WMXUqHVacPVH8j
+Learn more about Project ID
+Vercel Toolbar
+Enable the Vercel Toolbar on your Deployments.
+
+Pre-Production Deployments
+
+Default (controlled at the team level)
+Production Deployments
+
+Default (controlled at the team level)
+To use the toolbar in production your team members need the Chrome extension or to enable the toolbar for that domain in the toolbar menu. Learn more about using the toolbar in production.
+Learn more about the Vercel Toolbar
+Preview Deployment Suffix
+By default, the URL of every new Preview Deployment ends with .vercel.app. This setting allows you to choose your own custom domain in place of this suffix. This takes precedence over the team-level preview deployment suffix.
+
+my-deployment.
+vercel.app
+This feature is available on the Pro plan for an additional $100 per month.
+Data Preferences
+Vercel may train on and share code and chat data with AI model providers for training purposes only. If you turn this off, we will not share data going forward for this project.
+
+Improve models with this project’s data
+To change globally, open Team settings
+Transfer
+Transfer your project to another team without downtime or workflow interruptions.
+
+Learn more about Transferring Projects
+Delete Project
+Permanently delete this project and all deployments, domains, environment variables, serverless functions, and settings.
+
+Deployment Canceled
+
+virtual-setu-hub
+Last updated 6m ago
+virtual-setu-hub – Deployment Overview
+0%

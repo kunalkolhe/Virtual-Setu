@@ -1,0 +1,45 @@
+02:50:30.294 Running build in Washington, D.C., USA (East) – iad1
+02:50:30.294 Build machine configuration: 2 cores, 8 GB
+02:50:30.512 Cloning github.com/Pranav7758/Virtual-setu (Branch: main, Commit: 76b5ada)
+02:50:31.791 Cloning completed: 1.278s
+02:50:31.869 Found .vercelignore
+02:50:31.886 Removed 45 ignored files defined in .vercelignore
+02:50:31.887   /.git/config
+02:50:31.887   /.git/description
+02:50:31.887   /.git/FETCH_HEAD
+02:50:31.887   /.git/HEAD
+02:50:31.888   /.git/hooks/applypatch-msg.sample
+02:50:31.888   /.git/hooks/commit-msg.sample
+02:50:31.888   /.git/hooks/fsmonitor-watchman.sample
+02:50:31.888   /.git/hooks/post-update.sample
+02:50:31.889   /.git/hooks/pre-applypatch.sample
+02:50:31.889   /.git/hooks/pre-commit.sample
+02:50:33.357 Restored build cache from previous deployment (CYtbsWzNivHei29YtHFjswsr873f)
+02:50:33.557 Running "vercel build"
+02:50:34.287 Vercel CLI 51.6.1
+02:50:35.122 Installing dependencies...
+02:50:38.680 
+02:50:38.681 added 90 packages, and changed 3 packages in 3s
+02:50:38.681 
+02:50:38.682 119 packages are looking for funding
+02:50:38.682   run `npm fund` for details
+02:50:38.840 
+02:50:38.840 > vite_react_shadcn_ts@0.0.0 build
+02:50:38.840 > vite build
+02:50:38.841 
+02:50:39.184 [36mvite v5.4.19 [32mbuilding for production...[36m[39m
+02:50:39.240 transforming...
+02:50:39.581 Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+02:50:39.583   npx update-browserslist-db@latest
+02:50:39.583   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+02:50:42.581 [32m✓[39m 161 modules transformed.
+02:50:42.586 [31mx[39m Build failed in 3.38s
+02:50:42.587 [31merror during build:
+02:50:42.587 [31m[vite:load-fallback] Could not load /vercel/path0/src/integrations/supabase/client (imported by src/pages/Share.tsx): ENOENT: no such file or directory, open '/vercel/path0/src/integrations/supabase/client'[31m
+02:50:42.587     at async open (node:internal/fs/promises:639:25)
+02:50:42.587     at async Object.readFile (node:internal/fs/promises:1249:14)
+02:50:42.587     at async Object.load (file:///vercel/path0/node_modules/vite/dist/node/chunks/dep-C6uTJdX2.js:65341:25)
+02:50:42.587     at async PluginDriver.hookFirstAndGetPlugin (file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:20630:28)
+02:50:42.588     at async file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:19750:33
+02:50:42.588     at async Queue.work (file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:20840:32)[39m
+02:50:42.613 Error: Command "npm run build" exited with 1

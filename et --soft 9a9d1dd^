@@ -1,0 +1,26 @@
+[33m9a9d1dd[m [skip lovable] Use tech stack vite_react_shadcn_ts_20250728_minor
+[33m40d60d6[m Add 3D UI elements
+[33mb7439bf[m Connect to Supabase project
+[33me40d613[m Implement Supabase features
+[33m400159d[m Add Supabase integration
+[33mb06378c[m Implement document upload feature
+[33m915c6f7[m Implement QR code generation
+[33mdecb45e[m Fix QR code generation
+[33m54bc2f2[m Fix QR code and document verification
+[33mba7e74a[m Fix QR code scanning and document viewing
+[33mdf0a9c4[m Fix QR code scanning
+[33m0679d75[m Fix QR code access without login
+[33ma00bc35[m Fix QR code link behavior
+[33m5cf0736[m Fix QR code displaying HTML
+[33m7b53588[m Fix QR code not rendering
+[33mb3f48d8[m Refactor QR code to bypass login
+[33me7ac048[m Updated .gitignore
+[33m3504a6a[m Updated package-lock.json
+[33mb889f9e[m Added vite.config.ts.timestamp-1758296506219-ae0a38290ce46.mjs
+[33m76b2c9d[m Deleted vite.config.ts.timestamp-1758296506219-ae0a38290ce46.mjs
+[33m75525ab[m Fix login route in navigation
+[33m9ecd131[m Fix QR code URL to point to share page
+[33m8504b04[m Update Supabase client to use environment variables for production deployment
+[33m89336ac[m Fix QR code URL to point to deployed Vercel site
+[33m97805bc[m Add Vercel configuration for SPA routing
+[33m009dcb5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update README with professional documentation and add new components

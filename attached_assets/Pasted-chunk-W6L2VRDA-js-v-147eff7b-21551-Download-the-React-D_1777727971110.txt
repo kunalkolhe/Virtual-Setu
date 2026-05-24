@@ -1,0 +1,40 @@
+chunk-W6L2VRDA.js?v=147eff7b:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+DocumentList.tsx:131  POST https://02f7e402-375f-461d-ab07-cafc424b7b09-00-hfuighzi6qzi.pike.replit.dev/api/delete-document 403 (Forbidden)
+(anonymous) @ DocumentList.tsx:131
+await in (anonymous)
+handleEvent @ chunk-R2PCJVP6.js?v=147eff7b:14
+callCallback2 @ chunk-W6L2VRDA.js?v=147eff7b:3674
+invokeGuardedCallbackDev @ chunk-W6L2VRDA.js?v=147eff7b:3699
+invokeGuardedCallback @ chunk-W6L2VRDA.js?v=147eff7b:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-W6L2VRDA.js?v=147eff7b:3736
+executeDispatch @ chunk-W6L2VRDA.js?v=147eff7b:7014
+processDispatchQueueItemsInOrder @ chunk-W6L2VRDA.js?v=147eff7b:7034
+processDispatchQueue @ chunk-W6L2VRDA.js?v=147eff7b:7043
+dispatchEventsForPlugins @ chunk-W6L2VRDA.js?v=147eff7b:7051
+(anonymous) @ chunk-W6L2VRDA.js?v=147eff7b:7174
+batchedUpdates$1 @ chunk-W6L2VRDA.js?v=147eff7b:18913
+batchedUpdates @ chunk-W6L2VRDA.js?v=147eff7b:3579
+dispatchEventForPluginEventSystem @ chunk-W6L2VRDA.js?v=147eff7b:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-W6L2VRDA.js?v=147eff7b:5478
+dispatchEvent @ chunk-W6L2VRDA.js?v=147eff7b:5472
+dispatchDiscreteEvent @ chunk-W6L2VRDA.js?v=147eff7b:5449
+DocumentList.tsx:147 Delete error: Error: Document not found or access denied
+    at handleDeleteConfirmed (DocumentList.tsx:142:26)
+(anonymous) @ DocumentList.tsx:147
+await in (anonymous)
+handleEvent @ chunk-R2PCJVP6.js?v=147eff7b:14
+callCallback2 @ chunk-W6L2VRDA.js?v=147eff7b:3674
+invokeGuardedCallbackDev @ chunk-W6L2VRDA.js?v=147eff7b:3699
+invokeGuardedCallback @ chunk-W6L2VRDA.js?v=147eff7b:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-W6L2VRDA.js?v=147eff7b:3736
+executeDispatch @ chunk-W6L2VRDA.js?v=147eff7b:7014
+processDispatchQueueItemsInOrder @ chunk-W6L2VRDA.js?v=147eff7b:7034
+processDispatchQueue @ chunk-W6L2VRDA.js?v=147eff7b:7043
+dispatchEventsForPlugins @ chunk-W6L2VRDA.js?v=147eff7b:7051
+(anonymous) @ chunk-W6L2VRDA.js?v=147eff7b:7174
+batchedUpdates$1 @ chunk-W6L2VRDA.js?v=147eff7b:18913
+batchedUpdates @ chunk-W6L2VRDA.js?v=147eff7b:3579
+dispatchEventForPluginEventSystem @ chunk-W6L2VRDA.js?v=147eff7b:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-W6L2VRDA.js?v=147eff7b:5478
+dispatchEvent @ chunk-W6L2VRDA.js?v=147eff7b:5472
+dispatchDiscreteEvent @ chunk-W6L2VRDA.js?v=147eff7b:5449

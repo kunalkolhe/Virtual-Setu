@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/shield2.svg?v=9" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=9" />
+    <title>Virtual Setu - Your Digital Identity Hub</title>
+    <script>
+      // Force title immediately
+      document.title = "Virtual Setu - Your Digital Identity Hub";
+      
+      // Override title every 10ms to ensure it stays
+      setInterval(function() {
+        document.title = "Virtual Setu - Your Digital Identity Hub";
+      }, 10);
+      
+      // Also override on any title change
+      const originalTitle = document.title;
+      Object.defineProperty(document, 'title', {
+        get: function() {
+          return "Virtual Setu - Your Digital Identity Hub";
+        },
+        set: function(value) {
+          // Ignore any attempts to change the title
+        }
+      });
+      
+      // Override window.title as well
+      Object.defineProperty(window, 'title', {
+        get: function() {
+          return "Virtual Setu - Your Digital Identity Hub";
+        },
+        set: function(value) {
+          // Ignore any attempts to change the title
+        }
+      });
+    </script>
+    <meta name="description" content="Secure digital document management for Indian citizens. Upload, manage, and access your government IDs with Virtual Setu - your trusted identity platform." />
+    <meta name="author" content="Virtual Setu" />
+    <meta name="keywords" content="digital identity, aadhaar, pan card, passport, document management, virtual ID, government documents, secure storage" />
+
+    <meta property="og:title" content="Virtual Setu - Your Digital Identity Hub" />
+    <meta property="og:description" content="Secure digital document management for Indian citizens. Upload, manage, and access your government IDs instantly." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://virtual-setu-hub.vercel.app/placeholder.svg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Pranav7758" />
+    <meta name="twitter:image" content="https://virtual-setu-hub.vercel.app/placeholder.svg" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Force set title after page loads
+      window.addEventListener('load', function() {
+        document.title = "Virtual Setu - Your Digital Identity Hub";
+      });
+      // Also set it immediately
+      document.title = "Virtual Setu - Your Digital Identity Hub";
+    </script>
+  </body>
+</html>

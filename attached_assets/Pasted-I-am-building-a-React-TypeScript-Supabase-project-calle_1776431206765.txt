@@ -1,0 +1,84 @@
+I am building a React + TypeScript + Supabase project called "Virtual Setu".
+
+I want to implement an AI-based document verification system using GROQ API.
+
+Current flow:
+- User selects document type (e.g., PAN Card, Aadhaar Card, Passport)
+- User uploads a file
+
+New requirement:
+Before uploading to Supabase storage, the file must be verified using GROQ AI.
+
+Feature Requirements:
+
+1. When user uploads a document:
+   - Convert the file (image/pdf) to base64 or text (use OCR if needed)
+   - Send the extracted content to GROQ API for analysis
+
+2. GROQ AI should:
+   - Identify what type of document is uploaded (Aadhaar, PAN, Passport, etc.)
+   - Compare it with the selected document type
+   - Return:
+     {
+       isValid: boolean,
+       detectedType: string,
+       message: string
+     }
+
+3. Validation Logic:
+   - If detectedType === selectedType → allow upload
+   - Else → reject upload and show message
+
+4. Example Cases:
+   - User selects "PAN Card" but uploads Aadhaar:
+     → Reject upload
+     → Show: "You uploaded Aadhaar Card. Please upload PAN Card."
+
+   - User uploads correct document:
+     → Proceed with upload to Supabase
+
+5. UI Behavior:
+   - Show loading spinner while verifying
+   - Show success or error message clearly
+   - Do NOT upload file if invalid
+
+6. GROQ API Prompt:
+Use this prompt while calling GROQ:
+
+"You are a document verification AI.
+Analyze the given document content and identify its type.
+
+Supported types:
+- Aadhaar Card
+- PAN Card
+- Passport
+- Driving License
+- Other
+
+Return JSON only:
+{
+  \"detectedType\": \"...\",
+  \"isValid\": true/false,
+  \"message\": \"...\"
+}
+
+If the document content clearly belongs to a specific type, return that type.
+If unsure, return 'Other'.
+
+Also provide a helpful message for the user."
+
+7. Code Requirements:
+- Create a reusable function: verifyDocument(file, selectedType)
+- Use fetch/axios to call GROQ API
+- Handle errors properly
+- Integrate before Supabase upload logic
+
+8. Bonus:
+- Use OCR library (like tesseract.js) if file is image/pdf
+- Optimize for performance
+
+Generate:
+- Backend/Frontend integration code
+- GROQ API call function
+- React hook for verification
+- UI feedback logic

@@ -1,0 +1,4 @@
+project_id = "mfycihjvtpsxixptmasa"
+
+[functions.share-docs]
+verify_jwt = false

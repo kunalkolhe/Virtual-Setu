@@ -1,0 +1,8 @@
+/server/
+/supabase/
+/attached_assets/
+/.local/
+/.config/
+/.agents/
+/.git/
+*.log

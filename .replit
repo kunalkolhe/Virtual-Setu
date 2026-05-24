@@ -1,0 +1,68 @@
+modules = ["nodejs-20", "web", "postgresql-16"]
+[agent]
+expertMode = true
+integrations = ["javascript_database:1.0.0"]
+stack = "BEST_EFFORT_FALLBACK"
+
+[nix]
+channel = "stable-25_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "API server"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow]]
+name = "API server"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run server"
+waitForPort = 3001
+
+[[ports]]
+localPort = 3001
+externalPort = 3001
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 5001
+externalPort = 3001
+
+[userenv]
+
+[userenv.shared]
+VITE_SARVAM_API_KEY = "sk_utnraagu_Jy941qrpQnTRaBqlNML1VJ9x"
+VITE_SARVAM_API_KEY_2 = "sk_rf7ghysk_u6CsAUogm6xqhlCUhdZKxz4N"
+VITE_SARVAM_API_KEY_3 = "sk_03bufhfd_nUkpDKEExLEuDzKr2LqQX9OJ"
+

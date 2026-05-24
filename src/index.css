@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Virtual Setu — Official Indian Government Portal Design System */
+
+@layer base {
+  :root {
+    /* Official Government Color Palette */
+    --gov-navy:    #003580;
+    --gov-navy-dk: #002060;
+    --gov-saffron: #FF6200;
+    --gov-green:   #138808;
+    --gov-white:   #FFFFFF;
+
+    /* Backgrounds */
+    --background: 220 20% 94%;
+    --background-secondary: 0 0% 100%;
+    --foreground: 220 40% 10%;
+
+    /* Cards */
+    --card: 0 0% 100%;
+    --card-glass: 0 0% 100%;
+    --card-foreground: 220 40% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 10%;
+
+    /* Primary = Government Navy */
+    --primary: 216 100% 26%;
+    --primary-dark: 216 100% 19%;
+    --primary-light: 216 70% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary = Saffron */
+    --secondary: 23 100% 50%;
+    --secondary-dark: 23 100% 42%;
+    --secondary-light: 23 100% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent = Blue-slate (neutral hover, not green) */
+    --accent: 216 30% 93%;
+    --accent-dark: 216 30% 86%;
+    --accent-light: 216 30% 96%;
+    --accent-foreground: 216 100% 26%;
+
+    /* Muted */
+    --muted: 220 15% 94%;
+    --muted-light: 220 15% 96%;
+    --muted-foreground: 220 10% 42%;
+
+    /* Status */
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 125 83% 29%;
+    --warning: 38 90% 48%;
+
+    /* Borders */
+    --border: 220 13% 82%;
+    --border-light: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 216 100% 26%;
+
+    --radius: 0.25rem;  /* official portals use tighter radius */
+
+    /* Flat shadows (no 3D, no glow) */
+    --shadow-3d:   0 1px 4px rgba(0,0,0,0.10);
+    --shadow-glass: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-glow: none;
+    --shadow-glow-secondary: none;
+
+    /* Gradients (minimal, flat) */
+    --gradient-primary: linear-gradient(180deg, #003580 0%, #002060 100%);
+    --gradient-secondary: linear-gradient(180deg, #FF6200 0%, #d94f00 100%);
+    --gradient-hero: linear-gradient(180deg, #003580 0%, #002060 100%);
+    --gradient-glass: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    --gradient-mesh: linear-gradient(180deg, #eef2f7 0%, #e8edf5 100%);
+
+    --transition-smooth: all 0.15s ease;
+    --transition-bounce: all 0.15s ease;
+    --transition-spring: all 0.15s ease;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    background: #eef2f7;
+    font-family: 'Noto Sans', 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    min-height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  /* Official flat card — no 3D, no hover lift */
+  .card-3d {
+    @apply relative bg-white border border-[#cdd3da] rounded;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: border-color 0.15s ease;
+  }
+
+  .card-3d:hover {
+    transform: none;
+    border-color: #a0aec0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.09);
+  }
+
+  /* Government section header — blue left border */
+  .gov-section-title {
+    @apply font-bold text-[#003580] border-l-4 border-[#003580] pl-3 py-0.5;
+  }
+
+  /* Official table styling */
+  .gov-table {
+    @apply w-full border-collapse text-sm;
+  }
+  .gov-table thead tr {
+    @apply bg-[#003580] text-white;
+  }
+  .gov-table thead th {
+    @apply px-4 py-2.5 text-left font-semibold text-xs tracking-wide;
+  }
+  .gov-table tbody tr {
+    @apply border-b border-[#e2e8f0];
+  }
+  .gov-table tbody tr:nth-child(even) {
+    @apply bg-[#f7f9fc];
+  }
+  .gov-table tbody tr:hover {
+    @apply bg-[#eef2f7];
+  }
+  .gov-table tbody td {
+    @apply px-4 py-3 text-slate-700;
+  }
+
+  /* Official status pill */
+  .status-pill {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 text-[11px] font-semibold rounded-sm border uppercase tracking-wide;
+  }
+  .status-verified { @apply bg-[#e8f5e9] text-[#1b5e20] border-[#a5d6a7]; }
+  .status-pending  { @apply bg-[#fff8e1] text-[#795548] border-[#ffe082]; }
+  .status-rejected { @apply bg-[#ffebee] text-[#b71c1c] border-[#ef9a9a]; }
+
+  /* Official button styles */
+  .btn-glass {
+    @apply relative border border-white/20 rounded px-5 py-2.5 font-medium;
+    background: #003580;
+    color: white;
+    transition: background 0.15s ease;
+  }
+  .btn-glass:hover {
+    background: #002060;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Official notice box */
+  .gov-notice {
+    @apply bg-[#fff8e1] border-l-4 border-[#f9a825] px-4 py-3 text-sm text-[#5d4037];
+  }
+
+  /* Text gradient (simplified, no webkit clip) */
+  .text-gradient {
+    color: #003580;
+  }
+
+  /* Float = disabled (official look is static) */
+  .float, .float-delayed {
+    animation: none;
+  }
+
+  /* Mesh bg */
+  .bg-mesh {
+    background: #eef2f7;
+  }
+
+  /* Glow = disabled */
+  .glow-primary, .glow-secondary {
+    box-shadow: none;
+  }
+}
+
+@layer utilities {
+  .transform-3d { transform-style: flat; }
+  .rotate-x-5   { transform: none; }
+  .rotate-y-5   { transform: none; }
+  .perspective-1000 { perspective: none; }
+}
+
+/* ── Print: only show digital ID card ── */
+@media print {
+  body * { visibility: hidden !important; }
+  #digital-id-card, #digital-id-card * { visibility: visible !important; }
+  #digital-id-card {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .no-print { display: none !important; }
+  @page { size: landscape; margin: 0; }
+}
